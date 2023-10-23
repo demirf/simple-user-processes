@@ -34,6 +34,7 @@ Don't forget update the env file for DB config
 
 ```bash
 $ npm install
+$ npm run db:migration:run
 $ npm run start:dev
 ```
 
