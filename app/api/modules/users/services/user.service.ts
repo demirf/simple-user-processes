@@ -25,7 +25,7 @@ export class UserService {
   }
 
   findOne(filterDto: UserFilterDto) {
-    return this.usersRepository.findOneBy({ id: filterDto.id });
+    return this.usersRepository.findBy(filterDto);
   }
 
   async remove(id: number) {

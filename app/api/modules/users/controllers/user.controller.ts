@@ -1,6 +1,7 @@
 import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
 import { UserService } from '../services/user.service';
 import { UserCreateDto } from '../dto/user.create.dto';
+import { UserFilterDto } from "../dto/user.filter.dto";
 
 @Controller('users')
 export class UserController {
@@ -19,6 +20,11 @@ export class UserController {
   @Get(':id')
   findOne(@Param('id') id: number) {
     return this.userService.findOne({ id });
+  }
+
+  @Post('search')
+  search(@Body() filterDto: UserFilterDto) {
+    return this.userService.findOne(filterDto);
   }
 
   @Delete(':id')
