@@ -28,7 +28,7 @@ The simple crud app used Nest.js, Typeorm, React.js
 
 ## Before the start
 
-Don't forget the update env file for DB config 
+Don't forget update the env file for DB config 
 
 ## Backend
 
